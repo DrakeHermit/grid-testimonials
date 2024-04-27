@@ -2,8 +2,13 @@
 
 :root {
   --bg-color: hsl(210, 46%, 95%);
-  --text-color: hsl(0, 0%, 100%);
-  --text-color1: hsl(0, 0%, 81%);
+  --white-color: hsl(0, 0%, 100%);
+  --white-color1: hsl(0, 0%, 81%);
+  --dark-purple: hsl(263, 55%, 52%);
+  --grayish-blue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --light-gray: hsl(0, 0%, 81%);
 }
 
 * {
@@ -15,8 +20,11 @@
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
 }
 
+/* Hidden h1 */
 .hidden {
   display: none;
 }
@@ -33,4 +41,42 @@ p.status {
 p.experience {
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+.main__content {
+  max-width: 23.44rem;
+  padding: 4rem 2rem;
+}
+
+/* Card styles */
+.card {
+  border-radius: .7rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card__purple {
+  background-color: var(--dark-purple);
+}
+
+.card__grayish-blue {
+  background-color: var(--grayish-blue);
+}
+
+.card__blackish-blue {
+  background-color: var(--blackish-blue);
+}
+
+.card__white {
+  background-color: var(--white-color);
+}
+
+/* Font color for cards with light background */
+.card:not(.card__blackish-blue):not(.card__grayish-blue):not(.card__purple) {
+  color: var(--grayish-blue);
+}
+
+/* Font color for cards with dark background */
+.card:not(.card__white) {
+  color: var(--white-color);
 }
