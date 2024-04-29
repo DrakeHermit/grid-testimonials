@@ -49,7 +49,7 @@ p.experience {
 }
 
 .main__content {
-  max-width: 23.44rem;
+  /* max-width: 23.44rem; */
   padding: 4rem 1.156rem;
 }
 
@@ -145,5 +145,38 @@ p.experience {
 
 .status {
   opacity: 50%;
+}
+
+@media screen and (min-width: 90rem) {
+  body {
+    min-height: 100vh;
+    align-items: center;
+  }
+  .card {
+    margin-bottom: 0;
+    padding: 1.7rem 1.8rem;
+  }
+  .main__content {
+    display: grid;
+    max-width: 69rem;
+    gap: 1.8rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card__purple {
+    grid-column: span 2;
+  }
+  .card__purple .experience {
+    margin-bottom: 1.5rem;
+  }
+  .row__4 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+  .card__blackish-blue {
+    grid-column: span 2;
+  }
+  .account__info {
+    gap: 0.8rem;
+  }
 }
 
