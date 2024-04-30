@@ -30,7 +30,7 @@ img {
 }
 
 /* Hidden h1 */
-.hidden {
+.hidden, h2 {
   display: none;
 }
 
